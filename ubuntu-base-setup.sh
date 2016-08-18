@@ -10,5 +10,5 @@ apt-get update
 apt-get upgrade
 apt-get --assume-yes install vim
 apt-get --assume-yes install ubuntu-restricted-extras
-apt-get install openjdk-8-jdk
+apt-get --assume-yes install openjdk-8-jdk
 
