@@ -20,27 +20,27 @@ gpgcheck=1
 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 EOF
 
-dnf update
+dnf --assumeyes update
 
-dnf install vim
+dnf --assumeyes install vim
 
-dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
-dnf install gstreamer{1,}-{plugin-crystalhd,ffmpeg,plugins-{good,ugly,bad{,-free,-nonfree,-freeworld,-extras}{,-extras}}} libmpg123 lame-libs --setopt=strict=0
-dnf install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-ugly gstreamer-ffmpeg gstreamer1-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-good-extras gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-good gstreamer1-plugins-base gstreamer1
-dnf install vlc
+dnf --assumeyes install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
+dnf --assumeyes install gstreamer{1,}-{plugin-crystalhd,ffmpeg,plugins-{good,ugly,bad{,-free,-nonfree,-freeworld,-extras}{,-extras}}} libmpg123 lame-libs --setopt=strict=0
+dnf --assumeyes install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-ugly gstreamer-ffmpeg gstreamer1-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-good-extras gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-good gstreamer1-plugins-base gstreamer1
+dnf --assumeyes install vlc
 
-dnf install google-chrome-stable
+dnf --assumeyes install google-chrome-stable
 
-dnf install tint2
-dnf install openbox
+dnf --assumeyes install tint2
+dnf --assumeyes install openbox
 
-dnf install @xfce-desktop
+dnf --assumeyes install @xfce-desktop
 
-dnf install R
+dnf --assumeyes install R
 
-dnf install java-1.8.0-openjdk
+dnf --assumeyes install java-1.8.0-openjdk
 
 # This should be run as a normal user, not root
-sudo -u "$USER" "mkdir ~/.config/openbox && cp /etc/xdg/openbox/rc.xml ~/.config/openbox/ && echo 'tint2 &' > ~/.config/openbox/autostart"
+sudo -u "$USER" mkdir ~/.config/openbox && cp /etc/xdg/openbox/rc.xml ~/.config/openbox/ && echo 'tint2 &' > ~/.config/openbox/autostart
 
 
