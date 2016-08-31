@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-echo This script has not even been run or tested, its just a dumping ground for now, so please use at own risk
-exit
+echo This script has not even been tested, its just a dumping ground for now, so please use at own risk
+read -rsp $'Press any key to continue...\n' -n1 key
 
 if [ "$(whoami)" != "root" ]
 then
