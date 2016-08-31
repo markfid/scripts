@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo This script has not even been run or tested, it's just a dumping ground for now, so please use at own risk
+echo This script has not even been run or tested, its just a dumping ground for now, so please use at own risk
 exit
 
 if [ "$(whoami)" != "root" ]
