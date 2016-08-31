@@ -9,7 +9,7 @@ then
     exit
 fi
 
-su -c 'dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
+su -c 'dnf --assumeyes install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
 
 cat << EOF > /etc/yum.repos.d/google-chrome.repo
 [google-chrome]
@@ -41,6 +41,9 @@ dnf --assumeyes install R
 dnf --assumeyes install java-1.8.0-openjdk
 
 # This should be run as a normal user, not root
-sudo -u "$USER" mkdir ~/.config/openbox && cp /etc/xdg/openbox/rc.xml ~/.config/openbox/ && echo 'tint2 &' > ~/.config/openbox/autostart
+# sudo -u "$USER" cd /home/$USER && mkdir ~/.config/openbox && cp /etc/xdg/openbox/rc.xml ~/.config/openbox/ && echo 'tint2 &' > ~/.config/openbox/autostart
 
+sudo -u "$USER" bash -c "cd /home/$USER && mkdir .config/openbox"
+sudo -u "$USER" bash -c "cd /home/$USER && cp /etc/xdg/openbox/rc.xml .config/openbox/"
+sudo -u "$USER" bash -c "cd /home/$USER && echo 'tint2 &' > .config/openbox/autostart"
 
