@@ -34,6 +34,7 @@ apt-get --assume-yes install bleachbit
 
 cd ~
 mkdir -p git
+cd git
 [ -d jenkins-job-builder ] || git clone https://git.openstack.org/openstack-infra/jenkins-job-builder
 cd jenkins-job-builder/
 git pull
