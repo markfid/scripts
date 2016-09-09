@@ -33,9 +33,10 @@ apt-get --assume-yes install bleachbit
 # xubuntu-community-wallpapers-xenial
 
 cd ~
-mkdir git
-git clone https://git.openstack.org/openstack-infra/jenkins-job-builder
+mkdir -p git
+[ -d jenkins-job-builder ] || git clone https://git.openstack.org/openstack-infra/jenkins-job-builder
 cd jenkins-job-builder/
+git pull
 pip install -e .
 
 # pip install requests
