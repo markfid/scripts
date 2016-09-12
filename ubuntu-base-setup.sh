@@ -11,6 +11,8 @@ add-apt-repository -y ppa:webupd8team/sublime-text-3
 apt-get update ; echo "Exit status: $?"
 apt-get --assume-yes upgrade
 apt-get --assume-yes install vim
+apt-get --assume-yes install sshpass
+apt-get --assume-yes install xclip
 apt-get --assume-yes install git
 apt-get --assume-yes install ubuntu-restricted-extras
 apt-get --assume-yes install sublime-text-installer
@@ -30,6 +32,9 @@ apt-get --assume-yes install xchat-gnome xchat-gnome-indicator
 apt-get --assume-yes install keepassx
 apt-get --assume-yes install unity-tweak-tool
 apt-get --assume-yes install bleachbit
+
+# apt-get install linux-headers-`uname -r`
+# apt-get install linux-headers-$(uname -r)
 # xubuntu-community-wallpapers-xenial
 
 cd ~
