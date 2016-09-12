@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-echo PASSWORD | xclip -selection c
-sshpass -p 'PASSWORD' ssh USERNAME@IP_ADDRESS
+echo $(cat ~/passwords/pass) | xclip -selection c
+sshpass -f ~/passwords/pass ssh USERNAME@IP_ADDRESS
 
