@@ -33,6 +33,7 @@ apt-get --assume-yes install keepassx
 apt-get --assume-yes install unity-tweak-tool
 apt-get --assume-yes install bleachbit
 apt-get --assume-yes install galternatives
+apt-get --assume-yes install dos2unix
 
 # apt-get install linux-headers-`uname -r`
 # apt-get install linux-headers-$(uname -r)
