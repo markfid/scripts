@@ -39,6 +39,13 @@ apt-get --assume-yes install dos2unix
 # apt-get install linux-headers-$(uname -r)
 # xubuntu-community-wallpapers-xenial
 
+#TODO put as params
+#git config --global user.name ""
+#git config --global user.email ""
+git config --global http.postBuffer 524288000
+git config --global color.ui true
+git config --global credential.helper 'cache --timeout=3600'
+
 cd ~
 mkdir -p git
 cd git
