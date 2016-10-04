@@ -47,6 +47,7 @@ git config --global color.ui true
 git config --global credential.helper 'cache --timeout=3600'
 
 cd ~
+pip install boto
 mkdir -p git
 cd git
 [ -d jenkins-job-builder ] || git clone https://git.openstack.org/openstack-infra/jenkins-job-builder
