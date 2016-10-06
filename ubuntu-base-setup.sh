@@ -28,6 +28,7 @@ apt-get --assume-yes install wireshark
 apt-get --assume-yes install filezilla
 apt-get --assume-yes install mysql-workbench
 apt-get --assume-yes install openconnect
+apt-get --assume-yes install network-manager-openconnect-gnome
 apt-get --assume-yes install xchat-gnome xchat-gnome-indicator
 apt-get --assume-yes install keepassx
 apt-get --assume-yes install unity-tweak-tool
