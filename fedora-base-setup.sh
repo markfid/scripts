@@ -34,6 +34,7 @@ dnf --assumeyes install google-chrome-stable
 dnf --assumeyes install tint2
 dnf --assumeyes install openbox
 # yum install net-tools
+# yum install lsof
 
 dnf --assumeyes install @xfce-desktop
 
