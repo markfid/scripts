@@ -11,6 +11,8 @@ fi
 
 su -c 'dnf --assumeyes install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
 
+dnf --assumeyes copr enable mbooth/eclipse-neon
+
 cat << EOF > /etc/yum.repos.d/google-chrome.repo
 [google-chrome]
 name=google-chrome - \$basearch
@@ -23,6 +25,8 @@ EOF
 dnf --assumeyes update
 
 dnf --assumeyes install vim
+
+dnf --assumeyes install eclipse-neon
 
 dnf --assumeyes install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
 dnf --assumeyes install gstreamer{1,}-{plugin-crystalhd,ffmpeg,plugins-{good,ugly,bad{,-free,-nonfree,-freeworld,-extras}{,-extras}}} libmpg123 lame-libs --setopt=strict=0
