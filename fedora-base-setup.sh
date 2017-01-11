@@ -30,6 +30,7 @@ dnf --assumeyes install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras 
 dnf --assumeyes install vlc
 
 dnf --assumeyes install google-chrome-stable
+dnf --assumeyes install chromium
 
 dnf --assumeyes install tint2
 dnf --assumeyes install openbox
